@@ -1,0 +1,438 @@
+@charset "utf-8";
+
+/* placeholder */
+/*Chrome, Firefox, Opera, Safari 20.1+*/
+input::placeholder {
+	color: #767676 !important;
+	opacity: 1; /*firefox*/
+}
+/*Firefox*/
+input:-moz-input-placeholder {
+	color: #767676 !important;
+}
+/*IE 10-11*/
+input:-ms-placeholder {
+	color: #767676 !important;
+}
+input:-ms-input-placeholder {
+	color: #767676 !important;
+}
+/*Microsoft Edge*/
+input::-ms-placeholder {
+	color: #767676 !important;
+}
+
+/*Chrome, Firefox, Opera, Safari 20.1+*/
+textarea::placeholder {
+	color: #767676 !important;
+	opacity: 1; /*firefox*/
+}
+/*Firefox*/
+textarea:-moz-input-placeholder {
+	color: #767676 !important;
+}
+/*IE 10-11*/
+textarea:-ms-placeholder {
+	color: #767676 !important;
+}
+textarea:-ms-input-placeholder {
+	color: #767676 !important;
+}
+/*Microsoft Edge*/
+textarea::-ms-placeholder {
+	color: #767676 !important;
+}
+
+/* form 공통 */
+.form_style {
+	padding: 0 20px;
+	line-height: 44px; font-size: 1.6rem; color: #403f3f;
+	background-color: #fff;
+	border: 1px solid #d7d7d7;
+	box-sizing: border-box;
+}
+input[type="text"].form_style {
+	height: 46px;
+}
+input[type="text"].form_style:read-only {
+	background: #f2f2f2;
+}
+
+/* textarea */
+textarea.form_style{
+	display: block;
+	width: 100%;
+	padding: 12px 20px;
+	font-family: Notokr, sans-serif; line-height: 1.5em;
+	border: 1px solid #d7d7d7;
+}
+
+/* 버튼 영역 */
+.btn_area {
+	position: relative;
+	margin-top: 30px;
+	font-size: 0; line-height: 0; text-align: center;
+}
+.btn_area a, .btn_area button {
+	margin-right: 10px;
+}
+.btn_area a:last-child, .btn_area button:last-child {
+	margin-right: 0;
+}
+
+/* button */
+.btn, .btn_round {
+	display: inline-block;
+	position: relative;
+	/* font-family: Montserrat, sans-serif; */
+	font-size: 1.8rem; text-align: center;
+	border-style: solid; border-width: 1px;
+	-webkit-transform: rotate(-0.03deg);
+	-moz-transform: rotate(-0.03deg);
+	-o-transform: rotate(-0.03deg);
+	transform: rotate(-0.03deg);
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	-o-transition: 0.2s;
+	transition: 0.2s;
+	cursor: pointer;
+}
+.btn_round {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+/* 버튼 컬러 */
+.btn_default {
+	color: #fff;
+	background-color: #2e2e2e;
+	border-color: #2e2e2e;
+}
+.btn_positive1 {
+	color: #fff;
+	background-color: #1f70cc;
+	border-color: #1f70cc;
+}
+.btn_bo_default {
+	color: #2e2e2e;
+	background-color: #fff;
+	border-color: #2e2e2e;
+}
+
+/* 버튼 사이즈 */
+.btn_xs {
+	padding: 0 12px;
+	line-height: 28px;
+}
+.btn_sm {
+	padding: 0 16px;
+	line-height: 32px;
+}
+.btn_md {
+	padding: 0 25px;
+	line-height: 36px;
+}
+.btn_lg {
+	padding: 0 25px;
+	line-height: 44px;
+}
+
+/* 버튼 종류 */
+.btn_postprev, .btn_postnext {
+	display: inline-block;
+	padding-left: 25px;
+	background-repeat: no-repeat; 
+}
+.btn_postprev {
+	background-image: url(../../images/client/formstyle/btn_postprev.png);
+	background-position: left 45%;
+}
+.btn_postnext {
+	background-image: url(../../images/client/formstyle/btn_postnext.png);
+	background-position: left 55%;
+}
+.btn_postprev.btn_disabled, .btn_postnext.btn_disabled {
+	color: #a3a3a3;
+	cursor: default;
+}
+.btn_postprev.btn_disabled {
+	background-image: url(../../images/client/formstyle/btn_postprev_disabled.png);
+}
+.btn_postnext.btn_disabled {
+	background-image: url(../../images/client/formstyle/btn_postnext_disabled.png);
+}
+.btn_more {
+	position: relative;
+	display: inline-block;
+	width: 208px; height: 66px;
+	color: #1f70cc; font-family: Montserrat, sans-serif; font-size: 1.8rem; font-weight: 500; line-height: 66px; text-align: center;
+	background: #fff;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(31,112,204,0.2);
+}
+.btn_more::after {
+	content: "";
+	position: absolute; top: 50%; right: 25px;
+	display: block;
+	margin-top: -7px;
+	width: 8px; height: 14px;
+	background: url(../../images/client/formstyle/btn_more.png) no-repeat center; background-size: contain;
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	-o-transition: 0.2s;
+	transition: 0.2s;
+}
+
+
+/* 페이징 */
+.paging_wrap {
+	margin-top: 40px;
+	font-size: 0; line-height: 0; text-align: center;
+}
+.grid_row_md + .paging_wrap {
+	margin-top: 20px;
+}
+.paging_wrap a {
+	position: relative;
+	display: inline-flex;
+	margin-right: 14px;
+	width: 50px; height: 50px;
+	align-items: center; justify-content: center;
+	color: #767676; font-size: 1.8rem; vertical-align: top;
+	box-shadow: 0 0 10px rgba(95,95,95,0.1);	
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	-o-transition: 0.2s;
+	transition: 0.2s;
+}
+.paging_wrap a:last-child {
+	margin-right: 0;
+}
+.paging_wrap .page_prev, .paging_wrap .page_next, .paging_wrap .page_first, .paging_wrap .page_last {
+	font-size: 0; line-height: 0;
+}
+.page_prev::after, .page_next::after {
+	content: "...";
+	position: absolute; top: 40%;
+	font-size: 1.8rem; 
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.page_first, .page_last {
+	background-repeat: no-repeat; 
+} 
+.page_first {
+	background-image: url(../../images/client/formstyle/page_first.png);
+	background-position: 47% center;
+}
+.page_last {
+	background-image: url(../../images/client/formstyle/page_last.png);
+	background-position: 53% center;
+}
+
+/* tab */
+.tab_list {
+	margin-bottom: 4%;
+	font-size: 0; line-height: 0;
+}
+.tab_list li {
+	display: inline-block;
+	margin-left: 30px;
+}
+.tab_list li:first-child {
+	margin-left: 0;
+}
+.tab_list a {
+	display: block;
+	height: 48px;
+	color: #c2c2c2; font-size: 2.2rem; font-weight: 450; line-height: 48px;
+	-webkit-border-radius: 24px;
+	-moz-border-radius: 24px;
+	border-radius: 24px;
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	-o-transition: 0.2s;
+	transition: 0.2s;
+}
+.tab_list li.on a {
+	padding: 0 30px;
+	color: #fff;
+	background: #191919;
+}
+
+
+@media screen and (max-width:1279px) {}
+@media screen and (max-width:1079px) {}
+/* ================= hover ================= */
+@media screen and (min-width:1025px) {
+	
+	/* 버튼 컬러 hover */
+	.btn_default:hover {
+		background-color: #3f3f3f;
+		border-color: #3f3f3f;
+	}
+	.btn_positive1:hover {
+		background-color: #1364c0;
+		border-color: #1364c0;
+	}
+	.btn_bo_default:hover {
+		color: #fff;
+		background-color: #3f3f3f;
+	}
+
+	/* 버튼 종류 hover */
+	.btn_more:hover::after {
+		right: 20px;
+	}
+
+	/* tab hover */
+	.tab_list a:hover {
+		color: #191919;
+	}
+
+	/* 페이징 hover */
+	.paging_wrap a:hover {
+		color: #fff;
+		background-color: #191919;
+	}
+	.page_first:hover {
+		background-image: url(../../images/client/formstyle/page_first_hover.png);
+	}
+	.page_last:hover {
+		background-image: url(../../images/client/formstyle/page_last_hover.png);
+	}
+	
+}
+/* ================= //hover ================= */
+@media screen and (max-width:1024px) {
+
+	/* 버튼 종류 1024 */
+	.btn_more {
+		width: 160px; height: 54px;
+		font-size: 1.7rem; line-height: 54px;
+	}
+	.btn_more::after {
+		right: 18px;
+	}
+
+
+}
+@media screen and (max-width:768px) {
+	
+	/* form 공통 768 */
+	input[type="text"].form_style {
+		padding: 0 12px;
+	}
+	textarea.form_style {
+		padding: 10px 12px;
+	}
+
+	/* 페이징 768 */
+	.paging_wrap {
+		margin-top: 24px;
+	}
+	.grid_row_md + .paging_wrap {
+		margin-top: 12px;
+	}
+	.paging_wrap a {
+		width: 40px; height: 40px;
+		font-size: 1.7rem;
+	}
+	.page_prev::after, .page_next::after {
+		top: 38%;
+	}
+
+	/* 버튼 768 */
+	.btn_area {
+		margin-top: 25px;
+	}
+
+	/* tab 768 */
+	.tab_list li {
+		margin-left: 26px;
+	}
+	.tab_list a {
+		height: 40px;
+		font-size: 2rem; line-height: 40px;
+	}
+	.tab_list li.on a {
+		padding: 0 26px;
+	}
+
+}
+
+@media screen and (max-width:690px) {
+
+	/* tab 690 */
+	.tab_list {
+		margin-bottom: 6%;
+	}
+	.tab_list li {
+		margin-left: 20px;
+	}
+	.tab_list a {
+		height: 36px;
+		font-size: 1.7rem; line-height: 36px;
+	}
+	.tab_list li.on a {
+		padding: 0 20px;
+	}
+
+}
+
+@media screen and (max-width:480px) {
+
+	/* 버튼 종류 480 */
+	.btn_postprev, .btn_postnext {
+		padding-left: 22px;
+	}
+	.btn_more {
+		width: 130px;
+		height: 46px;
+		line-height: 46px;
+	}
+
+	/* 페이징 480 */
+	.paging_wrap a {
+		margin-right: 4px;
+		width: 34px; height: 34px;
+		font-size: 1.6rem;
+	}
+	.page_prev::after, .page_next::after {
+		top: 35%;
+	}
+
+}
+@media screen and (max-width:320px) {
+
+	/* tab 320 */
+	.tab_list li {
+		margin-left: 16px;
+	}
+	.tab_list a {
+		height: 32px;
+		font-size: 1.5rem; line-height: 32px;
+	}
+	.tab_list li.on a {
+		padding: 0 16px;
+	}
+
+	/* 페이징 320 */
+	.paging_wrap a {
+		margin-right: 2px;
+		width: 28px; height: 28px;
+		font-size: 1.4rem;
+	}
+	.page_prev::after, .page_next::after {
+		top: 32%;
+	}
+
+}
